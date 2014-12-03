@@ -181,6 +181,12 @@ class Tekserve_Modal_Newsletter_Widget extends WP_Widget {
 		echo '</div>';
 		echo '</div>';
 		
+		//inline style for now
+		echo '<style>';
+		echo '.tekserve-modal-newsletter-bg { background: rgba(100,100,100,.6); position: fixed; width: 100%; height: 100%; z-index: 99999; top: 0; left: 0; }';
+		echo '.tekserve-modal-newsletter-link.active { z-index: 999999; }';
+		echo '</style>';
+		
 		echo $after_widget;
 		
 	} //end public function widget( $args, $instance )
