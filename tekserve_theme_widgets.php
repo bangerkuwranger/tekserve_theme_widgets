@@ -82,7 +82,7 @@ class Tekserve_Contact_Search_Widget extends WP_Widget {
 		} 
 		else {
 		
-			 $accounturl = 'http://shop.tekserve.com/user/account';
+			 $accounturl = 'http://shop.tekserve.com/customer/account';
 			 $contacturl = '/about-us/contact-us/';
 			 
 		} //end if( $instance)
