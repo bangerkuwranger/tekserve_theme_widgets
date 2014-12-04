@@ -77,7 +77,7 @@ class Tekserve_Contact_Search_Widget extends WP_Widget {
 		if( $instance) {
 		
 			 $accounturl = esc_textarea($instance['accounturl']);
-			 $buttontext = esc_textarea($instance['buttontext']);
+			 $contacturl = esc_textarea($instance['contacturl']);
 			 
 		} 
 		else {
