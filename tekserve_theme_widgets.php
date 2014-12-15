@@ -49,20 +49,25 @@ class Tekserve_Contact_Search_Widget extends WP_Widget {
 
 		echo '<div class="tekserve-top-widget">';
 		
-		echo '<ul class="social-icons search-icons" style="width: 26px;">';
-		echo '<li class="tekserve_custom_search custom-search right search"><form method="get" autocomplete="off" class="searchform search-form" action="" role="search"><input  style="width:0 !important;" type="text" autocomplete="on" value="Find…" name="s" class="s search-input" onfocus="if (this.value == \'Find…\') {this.value = \'\';}" onblur="if (this.value == \'\') {this.value = \'Find…\';}"><input type="submit" class="searchsubmit search-submit" style="display:none !important;"value="GO"></form></li>';
+		echo '<ul class="social-icons search-icons">';
+		
 		echo '<li>';
 		echo '<a href="' . $accounturl . '" class="account-link" title="Go to your account">';
 		echo '	<i class="fa fa-user"></i>';
 		echo '</a>';
 		echo '</li>';
-		echo '</ul>';
 		
+		echo '<li class="tekserve_custom_search custom-search right search"><form method="get" autocomplete="off" class="searchform search-form" action="" role="search"><input type="text" autocomplete="on" value="Find…" name="s" class="s search-input" onfocus="if (this.value == \'Find…\') {this.value = \'\';}" onblur="if (this.value == \'\') {this.value = \'Find…\';}"><input type="submit" class="searchsubmit search-submit" style="display:none !important;"value="GO"></form></li>';
+		
+		echo '<li class="searchlink">';
 		echo '<a href="javascript:;" class="search-link" title="Search Tekserve for products and information">';
 		echo '	<i class="fa fa-search"></i>';
 		echo '</a>';
+		echo '</li>';
 		
-		echo '<div><a class="contact-link" title="Contact us via phone or email" href="' . $contacturl . '"><img src="' . plugins_url( '/img/contact-us.svg' , __FILE__ ) . '" onmouseover="this.src = \'' . plugins_url( '/img/contact-us-hover.svg' , __FILE__ ) . '\'" onmouseout="this.src =  \'' . plugins_url( '/img/contact-us.svg' , __FILE__ ) . '\'"></a></div>';
+		echo '</ul>';
+		
+		echo '<div><a class="contact-link" title="Contact us via phone or email" href="' . $contacturl . '"><img class="defaultstate" src="' . plugins_url( '/img/contact-us.svg' , __FILE__ ) . '" /><img class="hoverstate" src="' . plugins_url( '/img/contact-us-hover.svg' , __FILE__ ) . '" /></a></div>';
 		
 		echo '</div>';
 		
@@ -171,12 +176,13 @@ class Tekserve_Modal_Newsletter_Widget extends WP_Widget {
 		
 		//link to display modal
 		echo '<div class="tekserve-modal-newsletter-link">';
-		echo ' <i class="fa fa-envelope-o"></i> ';
+		echo ' <i class="fa fa-envelope-o"></i> SUBSCRIBE';
 		echo '</div>';
 		
 		//the modal iteself
 		echo '<div class="tekserve-modal-newsletter-bg" style="display:none;">';
 		echo '<div class="tekserve-modal-newsletter-window style="height:0;">';
+		echo '<div class="tekserve-modal-newsletter-window-close"><i class="fa fa-times-circle"></i></div>';
 		echo $modalcode;
 		echo '</div>';
 		echo '</div>';
@@ -184,7 +190,11 @@ class Tekserve_Modal_Newsletter_Widget extends WP_Widget {
 		//inline style for now
 		echo '<style>';
 		echo '.tekserve-modal-newsletter-bg { background: rgba(100,100,100,.6); position: fixed; width: 100%; height: 100%; z-index: 99999; top: 0; left: 0; }';
+		echo '.tekserve-modal-newsletter-link:hover { color: #004d72; cursor: pointer; }';
 		echo '.tekserve-modal-newsletter-link.active { z-index: 999999; }';
+		echo '.tekserve-modal-newsletter-window { position: fixed; background: #fff; width: 90%; margin: auto; max-height: 50%; top: 25%; padding: 2.5%; margin-left: 2.5%; }';
+		echo '.tekserve-modal-newsletter-window-close { text-align: right; color: #40a8c9; font-size: 2em; cursor: pointer; }';
+		echo '.tekserve-modal-newsletter-window-close:hover { color: #f36f37; }';
 		echo '</style>';
 		
 		echo $after_widget;

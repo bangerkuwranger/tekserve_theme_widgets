@@ -11,5 +11,13 @@ function initModalNews() {
 		$j(this).toggleClass('active')
 		
 	}); //end $j('.tekserve-modal-newsletter-link').click( function()
+	
+	$j('.tekserve-modal-newsletter-window-close').click( function() {
+	
+		$j('.tekserve-modal-newsletter-bg').toggle();
+		
+		$j('.tekserve-modal-newsletter-link').toggleClass('active')
+		
+	}); //end $j('.tekserve-modal-newsletter-window-close').click( function()
 
 } //end function initModalNews()
