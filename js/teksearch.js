@@ -1,7 +1,9 @@
 var $j = jQuery;
 
+var tekserveThemeWidgetSearch = true;
+
 // Header Search Box
-function initSearch () {
+function initTekserveThemeWidgetSearch () {
 
 	$j('.tekserve-top-widget .search-link').click( function() {
 		if ( $j(this).parent().hasClass( 'active' ) ) {

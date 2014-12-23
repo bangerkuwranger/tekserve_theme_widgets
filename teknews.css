@@ -1,0 +1,48 @@
+.tekserve-modal-newsletter-bg { 
+	background: rgba(100,100,100,.6); 
+	position: fixed; 
+	width: 100%; 
+	height: 100%; 
+	z-index: 99999; 
+	top: 0; 
+	left: 0; 
+}
+
+.tekserve-modal-newsletter-link:hover { 
+	color: #004d72; 
+	cursor: pointer; 
+}
+
+.tekserve-modal-newsletter-link.active {
+	z-index: 999999;
+}
+
+.tekserve-modal-newsletter-window {
+	position: fixed;
+	background: #fff;
+	width: 90%;
+	margin: auto;
+	max-height: 50%;
+	top: 25%;
+	padding: 2.5%; 
+	margin-left: 2.5%;
+}
+
+.tekserve-modal-newsletter-window-close { 
+	text-align: right;
+	color: #40a8c9;
+	font-size: 2em;
+	cursor: pointer;
+}
+
+.tekserve-modal-newsletter-window-close:hover { 
+	color: #f36f37;
+}
+
+@media (min-width: 1200px) {
+
+	.tekserve-modal-newsletter-window {
+		max-width: 1000px;
+	}
+
+}

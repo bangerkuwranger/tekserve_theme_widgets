@@ -187,16 +187,6 @@ class Tekserve_Modal_Newsletter_Widget extends WP_Widget {
 		echo '</div>';
 		echo '</div>';
 		
-		//inline style for now
-		echo '<style>';
-		echo '.tekserve-modal-newsletter-bg { background: rgba(100,100,100,.6); position: fixed; width: 100%; height: 100%; z-index: 99999; top: 0; left: 0; }';
-		echo '.tekserve-modal-newsletter-link:hover { color: #004d72; cursor: pointer; }';
-		echo '.tekserve-modal-newsletter-link.active { z-index: 999999; }';
-		echo '.tekserve-modal-newsletter-window { position: fixed; background: #fff; width: 90%; margin: auto; max-height: 50%; top: 25%; padding: 2.5%; margin-left: 2.5%; }';
-		echo '.tekserve-modal-newsletter-window-close { text-align: right; color: #40a8c9; font-size: 2em; cursor: pointer; }';
-		echo '.tekserve-modal-newsletter-window-close:hover { color: #f36f37; }';
-		echo '</style>';
-		
 		echo $after_widget;
 		
 	} //end public function widget( $args, $instance )
@@ -237,6 +227,7 @@ class Tekserve_Modal_Newsletter_Widget extends WP_Widget {
 		if ( is_active_widget( false, false, $this->id_base, true ) ) {
 	   
 		   wp_enqueue_script( 'teknews', plugins_url( '/js/teknews.js' , __FILE__ ), array( 'jquery' ) );
+		   wp_enqueue_style( 'teknewscss', plugins_url( '/teknews.css' , __FILE__ ) );
 	   
 		}  //end if ( is_active_widget ... )  
     
@@ -254,3 +245,7 @@ add_action( 'widgets_init', function(){
      register_widget( 'Tekserve_Modal_Newsletter_Widget' );
      
 }); //end add_action( 'widgets_init', function()
+
+/**	enqueue init script	**/
+
+wp_enqueue_script( 'tekservethemewidgets', plugins_url( '/js/tekservethemewidgets.js' , __FILE__ ), array( 'jquery' ) );

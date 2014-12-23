@@ -1,9 +1,12 @@
 var $j = jQuery;
 
-function initModalNews() {
+var tekserveThemeWidgetModalNews = true;
+
+function initTekserveThemeWidgetModalNews() {
 
 // 	var $modalNews = $j('.tekserve-modal-newsletter-bg').detach();
 // 	$j('body').prepend($modalNews);
+
 	$j('.tekserve-modal-newsletter-link').click( function() {
 	
 		$j('.tekserve-modal-newsletter-bg').toggle();
