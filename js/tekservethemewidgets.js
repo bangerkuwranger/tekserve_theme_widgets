@@ -10,14 +10,14 @@ var $j = jQuery;
 
 $j(function() {
 
-	if( tekserveThemeWidgetModalNews ) {
+	if( typeof( tekserveThemeWidgetModalNews ) !== 'undefined' ) {
 	
 		initTekserveThemeWidgetModalNews();
 	
 	}	//end if( tekserveThemeWidgetModalNews )
 	
 	
-	if( tekserveThemeWidgetSearch ) {
+	if( typeof( tekserveThemeWidgetSearch ) !== 'undefined' ) {
 	
 		initTekserveThemeWidgetSearch ();
 	
