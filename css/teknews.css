@@ -26,6 +26,7 @@
 	top: 25%;
 	padding: 2.5%; 
 	margin-left: 2.5%;
+	overflow: auto;
 }
 
 .tekserve-modal-newsletter-window-close { 
@@ -33,6 +34,11 @@
 	color: #40a8c9;
 	font-size: 2em;
 	cursor: pointer;
+	float: right;
+}
+
+.tekserve-modal-window-form {
+	margin-right: 2em;
 }
 
 .tekserve-modal-newsletter-window-close:hover { 
